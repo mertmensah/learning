@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Sep 15 12:37:16 2022
-
 @author: MertMM
 """
 
 
-"""Adjustable Parameters"""
+#Adjustable Parameters
 
-    balance = 42
+Debt = 42
 annualInterestRate = 0.20
 monthlyPaymentRate = 0.04
 monthsinyear = 12.00
@@ -17,7 +16,7 @@ monthlyInterestRate = annualInterestRate / monthsinyear
 
 def minpay(x):
     if x < 1:
-        return balance * monthlyPaymentRate
+        return Debt * monthlyPaymentRate
     else:
         return RemainingBalance(x) * monthlyPaymentRate 
 
@@ -35,7 +34,7 @@ def CarriedInterest(x):
 
 def RemainingBalance(x):
     if x == 0:
-        return round(balance, 2)
+        return round(Debt, 2)
     elif x >= 1:
         return round((unpaidBalance(x-1) + CarriedInterest(x-1)), 2)
     else:
