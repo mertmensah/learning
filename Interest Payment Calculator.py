@@ -6,14 +6,16 @@ Created on Thu Sep 15 12:37:16 2022
 
 
 #Adjustable Parameters
-
 Debt = 42
 annualInterestRate = 0.20
 monthlyPaymentRate = 0.04
-monthsinyear = 12.00
 
+
+monthsinyear = 12.00
 monthlyInterestRate = annualInterestRate / monthsinyear
 
+
+# Variable x is Months after Debt is incurred. Interest is assessed at the end of period/month 0.
 def minpay(x):
     if x < 1:
         return Debt * monthlyPaymentRate
